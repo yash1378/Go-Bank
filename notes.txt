@@ -13,3 +13,6 @@ If you reverse the order:
 2. **Setting Headers After**: When you then call [`w.Header().Set("Content-Type", "application/json")`](command:_github.copilot.openSymbolFromReferences?%5B%22%22%2C%5B%7B%22uri%22%3A%7B%22scheme%22%3A%22file%22%2C%22authority%22%3A%22%22%2C%22path%22%3A%22%2Fhome%2Fglitch%2FDesktop%2FGo-CRUD%2FlearningGo%2FAnthony-GG-tutorials%2FGo_Bank%2Fapi.go%22%2C%22query%22%3A%22%22%2C%22fragment%22%3A%22%22%7D%2C%22pos%22%3A%7B%22line%22%3A65%2C%22character%22%3A1%7D%7D%5D%2C%227efd91ab-b67e-4d70-a1bd-1ea036d16a79%22%5D "Go to definition"), it changes the header in the server's memory, but it does not affect the response already sent to the client.
 
 Thus, the correct order is to set the headers first and then write the status code to ensure the headers are sent correctly.
+
+How does the JWT process works ? 
+so at the time of creation of token we use header,payload and the secret key to ccreate a signature and then in future requests onwards we use the header and payload to create the signatyure again using the same secret key so that to verify the signature
